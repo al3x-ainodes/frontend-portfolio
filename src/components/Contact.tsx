@@ -67,9 +67,9 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-16 w-full"
         >
-          <h2 className="text-5xl md:text-6xl font-heading font-bold text-white mb-4">
+          <h2 className="text-5xl md:text-6xl font-heading font-bold text-white mb-4" style={{ marginLeft: '600px' }}>
             Get In <span className="text-accent-cyan">Touch</span>
           </h2>
           <div className="w-20 h-1 bg-accent-cyan mx-auto rounded" />
@@ -167,7 +167,7 @@ export default function Contact() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-6 bg-accent-cyan text-dark-900 font-semibold rounded-lg hover:bg-accent-cyan/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-xl cursor-pointer"
+                className="w-full py-6 bg-[#00d4ff] text-black font-semibold rounded-lg hover:bg-[#00d4ff]/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-xl cursor-pointer border-2 border-[#00d4ff] shadow-[0_0_20px_rgba(0,212,255,0.3)] hover:shadow-[0_0_30px_rgba(0,212,255,0.5)]"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
@@ -200,8 +200,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
+            className=""
           >
-            <h3 className="text-3xl font-heading font-semibold text-white mb-6">Schedule a Meeting</h3>
+            <h3 className="text-3xl font-heading font-semibold text-white mb-6" style={{ marginTop: '100px' }}>Schedule a Meeting</h3>
             <p className="text-gray-400 mb-6 text-lg">
               Prefer to schedule a call? Pick a time that works for you.
             </p>

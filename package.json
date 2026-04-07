@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:clean": "pkill -9 -f 'vite|node.*vite' 2>/dev/null || true; sleep 2; npm run dev -- --port 5173",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preview:clean": "pkill -9 -f 'vite preview' 2>/dev/null || true; sleep 2; npm run preview -- --port 5173 --host"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
