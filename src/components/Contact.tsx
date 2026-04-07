@@ -59,8 +59,8 @@ export default function Contact() {
       >
         <source src={videoFile} type="video/mp4" />
       </video>
-      <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-black via-black/80 to-transparent z-10" />
-      <div className="absolute inset-0 bg-dark-900/80 z-10" />
+      <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-black via-black/80 to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-dark-900/80 z-10 pointer-events-none" />
       <div className="relative z-20 max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -167,7 +167,7 @@ export default function Contact() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-6 bg-accent-cyan text-dark-900 font-semibold rounded-lg hover:bg-accent-cyan/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-xl"
+                className="w-full py-6 bg-accent-cyan text-dark-900 font-semibold rounded-lg hover:bg-accent-cyan/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-xl cursor-pointer"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
