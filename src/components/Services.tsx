@@ -47,6 +47,13 @@ const services = [
     title: 'Ads',
     description: 'Effective advertising strategies and campaigns to drive traffic and maximize your online reach.',
   },
+  // Placeholder to keep Ads in the right column
+  {
+    icon: <div className="w-8 h-8" />,
+    title: '',
+    description: '',
+    hidden: true,
+  },
 ];
 
 export default function Services() {
@@ -93,7 +100,7 @@ export default function Services() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:pl-[400px]">
-          {services.map((service, index) => (
+          {services.filter(s => !s.hidden).map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}

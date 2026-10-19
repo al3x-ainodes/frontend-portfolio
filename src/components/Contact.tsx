@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import videoFile from '../Images/video.mp4';
+import footerGif from '../Images/footer.gif';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,15 +50,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="min-h-screen py-32 bg-dark-900 relative overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
+      <img
+        src={footerGif}
+        alt="Background animation"
         className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src={videoFile} type="video/mp4" />
-      </video>
+      />
       <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-black via-black/80 to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-0 bg-dark-900/80 z-10 pointer-events-none" />
       <div className="relative z-20 max-w-7xl mx-auto px-6">
@@ -94,7 +90,7 @@ export default function Contact() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-6">
-                <div className="w-16 h-16 rounded-lg flex items-center justify-center text-accent-cyan">
+                <div className="w-16 h-16 bg-accent-cyan/10 rounded-lg flex items-center justify-center text-accent-cyan">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -106,7 +102,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-6">
-                <div className="w-16 h-16 rounded-lg flex items-center justify-center text-accent-cyan">
+                <div className="w-16 h-16 bg-accent-cyan/10 rounded-lg flex items-center justify-center text-accent-cyan">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -136,7 +132,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your Name"
                   required
-                  className="w-full px-6 py-6 bg-transparent border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan transition-colors text-xl"
+                  className="w-full px-6 py-6 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan transition-colors text-xl"
                 />
               </div>
               <div>
@@ -147,7 +143,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your Email"
                   required
-                  className="w-full px-6 py-6 bg-transparent border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan transition-colors text-xl"
+                  className="w-full px-6 py-6 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan transition-colors text-xl"
                 />
               </div>
               <div>
@@ -158,7 +154,7 @@ export default function Contact() {
                   placeholder="Your Message"
                   rows={5}
                   required
-                  className="w-full px-6 py-4 bg-transparent border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan transition-colors resize-none"
+                  className="w-full px-6 py-4 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-cyan transition-colors resize-none"
                 />
               </div>
 

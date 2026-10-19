@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 import cartoonImage from '../Images/cartoon.png';
 
 export default function About() {
@@ -36,27 +35,14 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="relative h-[500px] flex items-end justify-end"
           >
-            <Tilt
-              tiltMaxAngleX={15}
-              tiltMaxAngleY={15}
-              perspective={1000}
-              scale={1.02}
-              transitionSpeed={300}
-            >
-              <div className="relative">
-                <div className="w-full h-[450px] rounded-2xl overflow-visible">
-                    <img 
-                      src={cartoonImage} 
-                      alt="Cartoon" 
-                      className="w-full h-full object-contain drop-shadow-2xl"
-                      style={{ transform: 'scale(1.15)' }}
-                    />
-                </div>
-                {/* Accent border */}
-                <div className="absolute -inset-6 border-2 border-accent-cyan/30 rounded-2xl -z-10" />
-              </div>
-            </Tilt>
+            <img 
+              src={cartoonImage} 
+              alt="Yand3r cartoon" 
+              className="w-full md:w-3/4 h-auto drop-shadow-2xl"
+              style={{ transform: 'scale(1.1)' }}
+            />
           </motion.div>
 
           <motion.div
@@ -69,7 +55,7 @@ export default function About() {
               Passionate Web Developer
             </h3>
             <p className="text-gray-300 mb-8 text-xl leading-relaxed">
-              I'm Al3x, a creative web developer based in Miami. I specialize in creating 
+              I'm Yander, a creative web developer based in Miami. I specialize in creating 
               stunning, interactive websites and web applications that help businesses 
               stand out in the digital world.
             </p>
@@ -83,7 +69,7 @@ export default function About() {
               {[
                 { number: '3+', label: 'Years Exp.' },
                 { number: '20+', label: 'Projects' },
-                { number: '15+', label: 'Clients' },
+                { number: '5+', label: 'Clients' },
                 { number: '100%', label: 'Satisfaction' },
               ].map((stat, index) => (
                 <motion.div

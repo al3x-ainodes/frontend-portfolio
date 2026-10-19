@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Al3x. All rights reserved.
+            © {new Date().getFullYear()} Yander. All rights reserved.
           </p>
         </div>
       </div>

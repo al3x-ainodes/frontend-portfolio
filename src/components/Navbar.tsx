@@ -38,7 +38,7 @@ export default function Navbar() {
           className="text-2xl font-heading font-bold text-white"
           whileHover={{ scale: 1.05 }}
         >
-          <span className="text-accent-cyan">Al</span>3x
+          Yan<span className="text-accent-cyan">d</span>er
         </motion.a>
 
         {/* Desktop Navigation */}
