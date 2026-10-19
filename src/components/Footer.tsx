@@ -35,7 +35,7 @@ export default function Footer() {
             className="text-2xl font-heading font-bold text-white"
             whileHover={{ scale: 1.05 }}
           >
-            Yan<span className="text-accent-cyan">3</span>r
+            Yan<span className="text-accent-cyan">d3</span>r
           </motion.a>
 
           {/* Social Links */}
