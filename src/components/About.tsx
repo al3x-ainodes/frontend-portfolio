@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import cartoonImage from '../Images/cartoon.png';
+import cartoonImage from '../Images/cartoon.webp';
 
 export default function About() {
   return (

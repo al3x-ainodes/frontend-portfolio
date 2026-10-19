@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
-import eCommerceImage from '../Images/e-commerce.png';
-import businessImage from '../Images/business.png';
-import portfolioImage from '../Images/portfolio.png';
-import botanicaImage from '../Images/botanica-website-las-vegas.png';
-import cleaningImage from '../Images/cleaning-company-website.png';
-import coffeeShopImage from '../Images/coffee-shop.png';
-import astronautImage from '../Images/astronaut.png';
+import eCommerceImage from '../Images/e-commerce.webp';
+import businessImage from '../Images/business.webp';
+import portfolioImage from '../Images/portfolio.webp';
+import botanicaImage from '../Images/botanica-website-las-vegas.webp';
+import cleaningImage from '../Images/cleaning-company-website.webp';
+import coffeeShopImage from '../Images/coffee-shop.webp';
+import astronautImage from '../Images/astronaut.webp';
 
 type Project = {
   title: string;

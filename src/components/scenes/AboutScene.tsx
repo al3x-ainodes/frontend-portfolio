@@ -3,6 +3,17 @@ import { OrbitControls } from '@react-three/drei';
 import { useRef, useMemo } from 'react';
 import * as THREE from 'three';
 
+// Seeded random for reproducible particle positions
+function createSeededRandom(seed: number) {
+  let x = Math.sin(seed) * 10000;
+  return () => {
+    x = (x * 16807) % 2147483647;
+    return (x - 1) / 2147483646;
+  };
+}
+
+const particleRandom = createSeededRandom(42);
+
 function AboutGlobe() {
   const groupRef = useRef<THREE.Group>(null);
   const torusRef = useRef<THREE.Mesh>(null);
@@ -72,13 +83,13 @@ function AboutGlobe() {
     const positions = new Float32Array(count * 3);
     const sizes = new Float32Array(count);
     for (let i = 0; i < count; i++) {
-      const radius = 3.5 + Math.random() * 1.5;
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(2 * Math.random() - 1);
+      const radius = 3.5 + particleRandom() * 1.5;
+      const theta = particleRandom() * Math.PI * 2;
+      const phi = Math.acos(2 * particleRandom() - 1);
       positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
       positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
       positions[i * 3 + 2] = radius * Math.cos(phi);
-      sizes[i] = Math.random() * 0.5 + 0.5;
+      sizes[i] = particleRandom() * 0.5 + 0.5;
     }
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));

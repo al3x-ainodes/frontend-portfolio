@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import footerGif from '../Images/footer.gif';
+import footerVideo from '../Images/footer.webm';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,11 +50,15 @@ export default function Contact() {
 
   return (
     <section id="contact" className="min-h-screen py-32 bg-dark-900 relative overflow-hidden">
-      <img
-        src={footerGif}
-        alt="Background animation"
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
-      />
+      >
+        <source src={footerVideo} type="video/webm" />
+      </video>
       <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-black via-black/80 to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-0 bg-dark-900/80 z-10 pointer-events-none" />
       <div className="relative z-20 max-w-7xl mx-auto px-6">
