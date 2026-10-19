@@ -97,7 +97,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-base">Email</p>
-                  <p className="text-white text-xl">al3xvip@protonmail.com</p>
+                  <p className="text-white text-xl">yanderwebai@gmail.com</p>
                 </div>
               </div>
 
