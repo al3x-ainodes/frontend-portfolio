@@ -1,18 +1,30 @@
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
-import webAppImage from '../Images/web-app.png';
 import eCommerceImage from '../Images/e-commerce.png';
 import businessImage from '../Images/business.png';
 import portfolioImage from '../Images/portfolio.png';
+import botanicaImage from '../Images/botanica-website-las-vegas.png';
+import cleaningImage from '../Images/cleaning-company-website.png';
+import coffeeShopImage from '../Images/coffee-shop.png';
 import astronautImage from '../Images/astronaut.png';
 
-const projects = [
+type Project = {
+  title: string;
+  category: string;
+  description: string;
+  tech: string[];
+  image: string;
+  link?: string;
+};
+
+const projects: Project[] = [
   {
     title: 'E-commerce Platform',
     category: 'Web Development',
     description: 'A full-featured online store with shopping cart, payment integration, and admin dashboard.',
     tech: ['React', 'Node.js', 'MongoDB'],
     image: eCommerceImage,
+    link: 'https://erikacreativa.com/',
   },
   {
     title: 'Portfolio Website',
@@ -20,13 +32,7 @@ const projects = [
     description: 'A stunning portfolio website with 3D animations and smooth scrolling interactions.',
     tech: ['Three.js', 'React', 'Framer Motion'],
     image: portfolioImage,
-  },
-  {
-    title: 'Web Application',
-    category: 'Full Stack',
-    description: 'A powerful web application with real-time data, user authentication, and dashboard analytics.',
-    tech: ['React', 'TypeScript', 'Firebase'],
-    image: webAppImage,
+    link: 'https://ainodesn8n.netlify.app/',
   },
   {
     title: 'Business Website',
@@ -34,6 +40,31 @@ const projects = [
     description: 'A modern business website with responsive design and SEO optimization.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     image: businessImage,
+    link: 'https://magda-brightsolutions.vercel.app/',
+  },
+  {
+    title: 'Botanica Website',
+    category: 'Web Development',
+    description: 'A vibrant website for a Las Vegas botanica, showcasing plants, herbs, and spiritual products with a welcoming online presence.',
+    tech: ['React', 'Tailwind CSS', 'Framer Motion'],
+    image: botanicaImage,
+    link: 'https://ojaobalv.netlify.app/',
+  },
+  {
+    title: 'Cleaning Company Website',
+    category: 'Web Design',
+    description: 'A professional website for a cleaning company with service listings, pricing, and an easy booking experience.',
+    tech: ['React', 'Tailwind CSS', 'Formspree'],
+    image: cleaningImage,
+    link: 'https://lupitascleaningatl.netlify.app/',
+  },
+  {
+    title: 'Coffee Shop Website',
+    category: 'Frontend',
+    description: 'A warm, inviting coffee shop website featuring the menu, story, and location details for coffee lovers.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    image: coffeeShopImage,
+    link: 'https://lumierecoffee.netlify.app/',
   },
 ];
 
@@ -126,7 +157,7 @@ export default function Projects() {
                     </div>
 
                     <a 
-                      href="https://contra.com/yander_martinez"
+                      href={project.link ?? 'https://contra.com/yander_martinez'}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full mt-6 py-3 bg-dark-600 text-white rounded-lg hover:bg-accent-cyan hover:text-dark-900 transition-all font-medium text-center block"

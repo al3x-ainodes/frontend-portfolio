@@ -13,7 +13,7 @@
   }
 }
 
-:root {
+@theme {
   --color-dark-900: #090a0f;
   --color-dark-800: #111111;
   --color-dark-700: #1a1a1a;
@@ -21,6 +21,8 @@
   --color-accent-cyan: #00d4ff;
   --color-accent-blue: #0066ff;
   --color-accent-gold: #ffd700;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Poppins', sans-serif;
 }
 
 * {
@@ -62,15 +64,6 @@ body {
 ::selection {
   background: var(--color-accent-cyan);
   color: var(--color-dark-900);
-}
-
-/* Custom font classes */
-.font-heading {
-  font-family: 'Orbitron', sans-serif;
-}
-
-.font-body {
-  font-family: 'Poppins', sans-serif;
 }
 
 /* Glow effects */
@@ -655,7 +648,6 @@ a, button, input, textarea, select {
   inset: 0;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
-  z-index: -1;
 }
 
 .services-stars-bg::before {
